@@ -231,7 +231,6 @@ export default function Home() {
       audio.play().then(() => {
         setIsPlaying(true)
       }).catch(() => {
-        // fallback if autoplay blocked
         document.body.addEventListener(
           'click',
           () => {

@@ -263,7 +263,7 @@ export default function Home() {
     const audio = audioRef.current
     if (!audio) return
 
-    audio.currentTime = 32
+    audio.currentTime = 0
     // const tryPlay = () => {
     //   audio.play().then(() => {
     //     setIsPlaying(true)

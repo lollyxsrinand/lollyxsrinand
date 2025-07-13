@@ -248,7 +248,7 @@ export default function Home() {
       const current = audio.currentTime
       for (let i = lyricsData.length - 1; i >= 0; i--) {
         if (current >= lyricsData[i].time) {
-          setCurrentLyric(lyricsData[i].text)
+          setCurrentLyric(lyricsData[i].text as string)
           break
         }
       }

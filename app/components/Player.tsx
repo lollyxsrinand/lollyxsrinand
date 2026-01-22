@@ -32,7 +32,7 @@ const Player = () => {
                     volume={0.5}
                     config={{
                         youtube: {
-                            origin: 'http://localhost:3000'
+                            origin: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://lollyxsrinand.vercel.app',
                         }
                     }}
                 />

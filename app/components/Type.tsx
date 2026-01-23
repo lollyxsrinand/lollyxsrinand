@@ -9,11 +9,13 @@ const Write = () => {
     const onMouseEnter = () => {
         gsap.to(label_ref.current, {
             scale: 0,
+            filter: 'blur(4px)',
             opacity: 0,
             duration: 0.2,
         })
         gsap.to(arrow_ref.current, {
             scale: 1,
+            filter: 'blur(0px)',
             opacity: 1,
             duration: 0.2,
         })
@@ -21,11 +23,13 @@ const Write = () => {
     const onMouseLeave = () => {
         gsap.to(label_ref.current, {
             scale: 1,
+            filter: 'blur(0px)',
             opacity: 1,
             duration: 0.2,
         })
         gsap.to(arrow_ref.current, {
             scale: 0,
+            filter: 'blur(10px)',
             opacity: 0,
             duration: 0.2,
         })
@@ -34,7 +38,7 @@ const Write = () => {
         <a href="/itype"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            className="relative flex gap-2 justify-center items-center w-full h-52 rounded-2xl bg-neutral-200 text-black font-extralight text-4xl cursor-pointer">
+            className="relative flex gap-2 justify-center items-center w-full h-28 md:h-52 rounded-2xl bg-neutral-200 text-black md:font-extralight text-2xl md:text-4xl cursor-pointer">
 
             <h1 ref={label_ref}>i type</h1>
             <div

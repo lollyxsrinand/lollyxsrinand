@@ -8,12 +8,12 @@ import Type from './components/Type'
 import Cook from './components/Cook'
 
 const Home = async () => {
-  
+
   return (
     <div className="flex flex-col p-2.5 gap-5">
       <div className='w-full flex justify-between items-center'>
         <div className='flex flex-col gap-2.5'>
-          <h1 className='h-fit text-center text-4xl font-extralight text-black bg-neutral-100 p-2.5 rounded-2xl'>i{`'`}m srinand ツ</h1>
+          <h1 className='h-fit text-center text-3xl md:text-4xl font-extralight text-black bg-neutral-100 p-2.5 rounded-2xl'>i{`'`}m srinand ツ</h1>
           <p className="font-extralight">give up on your dreams and die.</p>
         </div>
         <Clock />
@@ -39,6 +39,7 @@ const Home = async () => {
 }
 
 export default Home
+
 //62  
 // rip spotify man
 // const token = '';

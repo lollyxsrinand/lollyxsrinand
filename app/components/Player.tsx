@@ -41,7 +41,7 @@ const Player = () => {
     }
 
     return (
-        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`h-48 w-48 rounded-2xl flex justify-center items-center gap-2.5 bg-neutral-200 flex-col absolute hover:opacity-100 ${isPlaying ? 'opacity-100' : ''} opacity-0 transition-all duration-300`}>
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={`h-28 w-28 md:h-48 md:w-48 rounded-2xl flex justify-center items-center gap-2.5 bg-neutral-200 flex-col absolute hover:opacity-100 ${isPlaying ? 'opacity-100' : ''} opacity-0 transition-all duration-300`}>
             {/* <div ref={arrow_ref} className='absolute top-0 right-0 scale-0 h-10 w-10 rounded-full bg-black flex justify-center items-center shadow-2xl opacity-0'>
                 <ArrowUpRight color='white' size={32} />
             </div> */}
@@ -63,11 +63,11 @@ const Player = () => {
             <div onClick={() => setIsPlaying(!isPlaying)} className="flex justify-center items-center cursor-pointer" style={{ transform: `rotate(${rotation}deg)` }} >
 
                 {isPlaying
-                    ? <LucideCircle fill='#ffffff' size={24} className='absolute z-20 text-white pointer-events-none' />
-                    : <LucidePlay fill='#ffffff' size={32} className='text-white absolute z-20 pointer-events-none' />
+                    ? <LucideCircle fill='#ffffff' className='absolute z-20 text-white pointer-events-none md:h-4 md:w-4 h-2 w-2' />
+                    : <LucidePlay fill='#ffffff' className='text-white absolute z-20 pointer-events-none h-3 w-3 md:h-6 md:w-6' />
                 }
 
-                <Image className="rounded-full select-none" src={song_cover} width={100} height={100} alt="album art" priority />
+                <Image className="rounded-full select-none h-14 w-14 md:h-24 md:w-24" src={song_cover} width={100} height={100} alt="album art" priority />
             </div>
             <p className='font-extralight text-black text-xl select-none'>outside</p>
         </div>
